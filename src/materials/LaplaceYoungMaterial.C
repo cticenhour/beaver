@@ -20,5 +20,7 @@ LaplaceYoungMaterial::LaplaceYoungMaterial(const InputParameters & parameters)
 void
 LaplaceYoungMaterial::computeQpProperties()
 {
-  _kay[_qp] = 1 / std::sqrt(1 + _grad_v[_qp] * _grad_v[_qp]);
+  _kay[_qp] =
+      1 / std::sqrt(1 + (_grad_v[_qp](0) * _grad_v[_qp](0) + _grad_v[_qp](1) * _grad_v[_qp](1) +
+                         _grad_v[_qp](2) * _grad_v[_qp](2)));
 }
