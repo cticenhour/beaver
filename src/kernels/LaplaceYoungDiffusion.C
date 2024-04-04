@@ -1,4 +1,5 @@
 #include "LaplaceYoungDiffusion.h"
+#include <cmath>
 
 registerMooseObject("BeaverApp", LaplaceYoungDiffusion);
 

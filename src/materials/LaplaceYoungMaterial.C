@@ -1,4 +1,5 @@
 #include "LaplaceYoungMaterial.h"
+#include <cmath>
 
 registerMooseObject("BeaverApp", LaplaceYoungMaterial);
 
